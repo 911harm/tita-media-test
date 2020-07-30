@@ -106,8 +106,6 @@ header{
 #icon-menu:hover{
     opacity: 0.8;
 }
-/*Portada*/
-
 
 .blog-container-cover{
     width: 100%;
@@ -163,6 +161,7 @@ header{
 .btn-tita2:hover{
     color: turquoise;
 }
+/*break*/
 .break{
     height:25px;
     width: 80px;
