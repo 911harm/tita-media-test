@@ -1,3 +1,8 @@
+/*Para proyectos parecidos y sin las condiciones de la prueba me parece que 
+VUE es buen candidato aunque en cualquier otro funcionara con buen performance
+con buenas practicas 
+*/
+
 let toHTML=""
 const accesKey ="Yg4Lehzi3fu4oqc_JF_Rj8uHAxEW6SCqhwAfsYwVfk4";
 const endPoint = 'https://api.unsplash.com/search/photos';
@@ -55,17 +60,20 @@ function createImages(ItemsArray){
 getImages('cars');
 
 
-//No es buena practica el onclick en el html
-// aunque quiero aprobechar el tiempo que me puede ahorrar para esta ocacion
-//muchos document.getElementById -.-! y sus eventListener
+/*No es buena practica el onclick en el html
+ aunque quiero aprobechar el tiempo que me puede ahorrar para esta ocacion
+muchos document.getElementById -.-! y sus eventListener*/
 
 
 //FILTRO 
 const filterItem=(wordkey)=>{
   
     let filterItems = imagesList.filter((item)=> item.tags[2].title == wordkey);
-        console.log(filterItems);
+       // console.log(filterItems);
         createImages(filterItems);
-        console.log(`se filtro por ${wordkey}`);
+        // console.log(`se filtro por ${wordkey}`);
 
 }
+/*Pense en implementar el sistema de filtrado con CSS pero 
+no me parece sostenible a largo plaso
+*/

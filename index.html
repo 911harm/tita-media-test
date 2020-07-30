@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tita Media - Test</title>
+    <title>Tita Media - Test-Harm</title>
     <link rel="stylesheet" href="css/main.css">  
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/f408ee9724.js" crossorigin="anonymous"></script>
@@ -13,19 +13,20 @@
         <div class="header-content">
 
             <div class="logo">
-                <h1>911<b>Harm</b></h1>
+                <h1>911<b><a href="https://github.com/911harm/tita-media-test" target="_blanck">Harm</a></b></h1>
             </div>
 
             <div class="menu" id="show-menu">
 
                 <nav>
                     <ul>
-                        <li class="menu-selected"><a href="/index.html" class="text-menu-selected">All</a></li>
-                        <li><a href="#"> Branding</a></li>
-                        <li><a href="#"> </i>Web</a></li>
-                        <li><a href="#"></i>Photography</a></li>
-                        <li><a href="#"></i>App</a></li>
-                        <li><a href="#"><i class="fas fa-search"></i></a></li>
+                        <li class="menu-selected">
+                            <a href="#Items" class="text-menu-selected" onclick="createImages(imagesList)">All</a></li>
+                        <li><a href="#Items" onclick="filterItem('automobile')">Branding</a></li>
+                        <li><a href="#Items" onclick="filterItem('transportation')">Web</a></li>
+                        <li><a href="#Items" onclick="filterItem('travel')">Photography</a></li>
+                        <li><a href="#Items" onclick="filterItem('machine')"></i>App</a></li>
+                        <li><a href="#Items"><i class="fas fa-search"></i></a></li>
                     </ul>
                 </nav>
 
@@ -41,7 +42,7 @@
     <div class="container-all" id="move-content"></div>
     
     <!--Section 1-->
-    <div class="blog-container-cover">
+    <div class="container-cover">
         <div class="container-info-cover">
             <h2>EXPLORE BEYON HORIZON</h2>
             <p>Magma mundi referrentur quo, no rebum signissim qui.<br>Per quodsi accusata id, agam labores.</p>
@@ -51,22 +52,21 @@
     <!--Section Break-->
     <div class="break"><i class="fas fa-th-large in-grid c-rosa"></i><i class="fas fa-grip-lines in-line c-rosa"></i></div>
     <div style="width: 500px; margin: 0px auto;">
-        <div class="menu mx-auto">
+        <div class="menu">
 
-            <nav>
+            <nav >
                 <ul>
                     <li class="menu-selected"><a href="#Items" id="f0" class="text-menu-selected" onclick="createImages(imagesList)">All</a></li>
                     <li><a href="#Items" onclick="filterItem('automobile')" id="f1"> Branding</a></li>
-                    <li><a href="#Items" onclick="filterItem('transportation')" id="f2"> </i>Web</a></li>
-                    <li><a href="#Items" onclick="filterItem('travel')" id="f3"></i>Photography</a></li>
-                    <li><a href="#Items" onclick="filterItem('machine')" id="f4"></i>App</a></li>
+                    <li><a href="#Items" onclick="filterItem('transportation')" id="f2">Web</a></li>
+                    <li><a href="#Items" onclick="filterItem('travel')" id="f3">Photography</a></li>
+                    <li><a href="#Items" onclick="filterItem('machine')" id="f4">App</a></li>
                 </ul>
             <nav>
         </div>
     </div>
-    <!--Section2-Grilla de Portafolio-->
+    <!-- Section2-Grilla de Portafolio-->
     <div class="container grid-container" id="Items">
-        
     </div>
     <!--Fin de la GRilla-->
 
@@ -91,3 +91,5 @@
     <script src="main.js"></script>
 </body>
 </html>
+<!--El Principio KISS del inglés Keep It Simple, Stupid!-->
+<!--Aplico mantenerlo simple-->
