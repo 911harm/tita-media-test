@@ -12,6 +12,18 @@ async function getImages(query){
   
 
 }
+// Menu despliege
+
+document.getElementById("icon-menu").addEventListener("click", mostrar_menu);
+
+function mostrar_menu(){
+
+    document.getElementById("move-content").classList.toggle('move-container-all');
+    document.getElementById("show-menu").classList.toggle('show-lateral');
+}
+
+//Montar imagenes en el html
+
 
 function createImages(ItemsArray){
     toHTML="";
@@ -39,38 +51,21 @@ function createImages(ItemsArray){
 }
 
 
+
 getImages('cars');
 
-//ALL
-const f0=document.getElementById("f0");
-f0.addEventListener("click",createImages(imagesList))
+
+//No es buena practica el onclick en el html
+// aunque quiero aprobechar el tiempo que me puede ahorrar para esta ocacion
+//muchos document.getElementById -.-! y sus eventListener
 
 
-//FILTRO 1 (unificar más adelante por la palabra a buscar)
-
-const filterItem1=()=>{
+//FILTRO 
+const filterItem=(wordkey)=>{
   
-    let filterItems = imagesList.filter((item)=> item.tags[2].title == "automobile");
+    let filterItems = imagesList.filter((item)=> item.tags[2].title == wordkey);
         console.log(filterItems);
         createImages(filterItems);
-        console.log("se filtro automobil");
+        console.log(`se filtro por ${wordkey}`);
 
 }
-const f1=document.getElementById("f1");
-f1.addEventListener("click",filterItem1)
-
-
-
-//Es mas comodo pasar por parametro la wordkey para aplicar el filtro
-
-
-const filterItem2=()=>{
-  
-    let filterItems = imagesList.filter((item)=> item.tags[2].title == "transportation");
-        console.log(filterItems);
-        createImages(filterItems);
-        console.log("se filtro transportation");
-
-}
-const f2=document.getElementById("f2");
-f2.addEventListener("click",filterItem2)

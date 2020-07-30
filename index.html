@@ -37,6 +37,9 @@
             <i class="fas fa-bars"></i>
         </div>
     </header>
+    <!--menu despegable-->
+    <div class="container-all" id="move-content"></div>
+    
     <!--Section 1-->
     <div class="blog-container-cover">
         <div class="container-info-cover">
@@ -52,11 +55,11 @@
 
             <nav>
                 <ul>
-                    <li class="menu-selected"><a href="#Items" id="f0" class="text-menu-selected">All</a></li>
-                    <li><a href="#Items" id="f1"> Branding</a></li>
-                    <li><a href="#Items" id="f2"> </i>Web</a></li>
-                    <li><a href="#Items" id="f3"></i>Photography</a></li>
-                    <li><a href="#Items" id="f1"></i>App</a></li>
+                    <li class="menu-selected"><a href="#Items" id="f0" class="text-menu-selected" onclick="createImages(imagesList)">All</a></li>
+                    <li><a href="#Items" onclick="filterItem('automobile')" id="f1"> Branding</a></li>
+                    <li><a href="#Items" onclick="filterItem('transportation')" id="f2"> </i>Web</a></li>
+                    <li><a href="#Items" onclick="filterItem('travel')" id="f3"></i>Photography</a></li>
+                    <li><a href="#Items" onclick="filterItem('machine')" id="f4"></i>App</a></li>
                 </ul>
             <nav>
         </div>
